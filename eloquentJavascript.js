@@ -51,3 +51,13 @@ function isEven(n){
         return isEven(n-2);
     }
 }
+
+function countLetter(string){
+    let count = 0;
+    for(let i = 0; i<string.length; i++){
+        if("B" === string[i]){
+            count +=1;
+        }
+    }
+    return count;
+}
