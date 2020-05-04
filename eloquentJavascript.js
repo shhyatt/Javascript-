@@ -61,3 +61,13 @@ function countLetter(string){
     }
     return count;
 }
+
+function countChar(string, letter){
+    count = 0;
+    for(let i = 0; i<string.length; i++){
+        if(letter === string[i]){
+            count +=1;
+        }
+    }
+    return count;
+}
