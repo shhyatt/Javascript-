@@ -31,3 +31,11 @@ for (let line = "#"; line.length < 8; line += "#")
 
   console.log(board);
   }
+
+  function min(a, b){
+    if(a<b){
+        return a;
+    }else{
+        return b;
+    }
+}
