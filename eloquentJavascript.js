@@ -83,3 +83,21 @@ function sockMerchant(n, ar) {
 
     return pairs;
 }
+
+function countingValleys(n, s) {
+    let peaks = 0
+    let valleys = 0
+    for(let i = 0; i < n; i++){
+        if(s[i] === 'U'){
+            peaks ++;
+        };
+        if(s[i] === 'D'){
+            peaks --;
+            if(peaks === -1){
+                valleys ++
+            }
+        }
+
+    };
+    return valleys
+}
