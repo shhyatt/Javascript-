@@ -71,3 +71,15 @@ function countChar(string, letter){
     }
     return count;
 }
+
+function sockMerchant(n, ar) {
+    let storage = {}
+    let pairs = 0
+
+     for (var i = 0; i < n; i++) {
+        storage[ar[i]] = !storage[ar[i]];
+        if (!storage[ar[i]]) pairs++;
+    }
+
+    return pairs;
+}
