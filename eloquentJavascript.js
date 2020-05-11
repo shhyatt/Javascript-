@@ -113,3 +113,13 @@ function jumpingOnClouds(c) {
     }
   return jumps
 }
+
+var isPalindrome = function(x) {
+    let s = x.toString();
+    let rev = s.split('').reverse().join('');
+    let num = parseInt(rev)
+    if(x === num){
+        return true;
+    }else{
+        return false;
+    }
