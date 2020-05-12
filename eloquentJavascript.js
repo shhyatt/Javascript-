@@ -162,3 +162,10 @@ var isSameTree = function(p, q) {
       return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 
 };
+
+var mySqrt = function(x) {
+    let root = Math.sqrt(x);
+    let num = Math.floor(root);
+    return num;
+
+};
