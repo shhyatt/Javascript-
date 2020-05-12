@@ -149,5 +149,16 @@ var merge = function(nums1, m, nums2, n) {
     nums1.push(...nums2)
     nums1.sort((a, b) => a - b)
     return nums1
-      
+
+};
+
+var isSameTree = function(p, q) {
+    if(p===null) return q===null;
+
+    if(q===null) return p===null;
+
+    if(p.val!==q.val) return false;
+
+      return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+
 };
