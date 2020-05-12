@@ -169,3 +169,17 @@ var mySqrt = function(x) {
     return num;
 
 };
+
+var lengthOfLastWord = function(s) {
+    let trimmed = s.trim()
+    let splitString = trimmed.split(" ")
+    let len = splitString.length
+    if(splitString[len - 1] == ""){
+        return 0
+    } else if (splitString[len - 1].length === 1){
+        return 1
+    }else{
+        return splitString[len-1].length
+    };
+
+};
