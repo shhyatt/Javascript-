@@ -218,3 +218,13 @@ var isHappy = function(n) {
     }
 
 };
+
+let range = (n1,n2) => {
+    let ar = [];
+    let add = (a,b) => a + b;
+    for(let i = n1; i<=n2; i++){
+        ar.push(i);
+    }
+    let sum = ar.reduce(add);
+    return sum;
+}
