@@ -189,37 +189,30 @@ var isHappy = function(n) {
     if(n === 6){
         return false
     }
-    let count = 0;
     let squaredAr = [];
     let sum;
-    let numNum;
-    let square;
     let add = (a,b) => a + b
     let ar = n.toString().split('');
     ar.forEach(num => {
         let numNum = parseInt(num)
         let square = numNum*numNum
-        if(numNum === square){
-            count ++;
-            squaredAr.push(0)
-        }else{
+
         squaredAr.push(square)
-    }
+
         })
     //console.log(squaredAr, count)
 
     sum = squaredAr.reduce(add)
 
-    if(count >= 1){
-        sum = sum + 1
-    }else{
-        sum = sum
-    }
     //console.log(sum)
     if(sum === 1){
+
        return true;
+    }else if(sum === 7){
+        return true
     }else if(sum > 9){
         return isHappy(sum);
+
     }else{
         return false;
     }
