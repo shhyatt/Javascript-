@@ -228,3 +228,17 @@ let range = (n1,n2) => {
     let sum = ar.reduce(add);
     return sum;
 }
+
+var rob = function(nums) {
+
+	solution = {};
+
+	solution[nums.length] = 0;
+	solution[nums.length-1] = nums[nums.length-1];
+
+	for (let i=nums.length-2; i>=0; i--) {
+		solution[i] = Math.max(nums[i] + solution[i + 2], solution[i+1]);
+	}
+
+	return solution[0];
+};
