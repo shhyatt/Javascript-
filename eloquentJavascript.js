@@ -242,3 +242,16 @@ var rob = function(nums) {
 
 	return solution[0];
 };
+
+var majorityElement = function(nums) {
+    const checkedElems = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (checkedElems.includes(nums[i])) continue;
+
+        if (nums.filter(elem => elem !== nums[i]).length < (nums.length / 2)) {
+            return nums[i];
+        } else {
+            checkedElems.push(nums[i]);
+        }
+    }
+};
