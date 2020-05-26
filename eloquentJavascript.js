@@ -255,3 +255,21 @@ var majorityElement = function(nums) {
         }
     }
 };
+
+function repeatedString(s, n) {
+    let count = 0;
+    let remainder = n%s.length
+    let rep = Math.trunc(n/s.length);
+    for(let i = 0; i < s.length; i++){
+        if( s[i] === "a"){;
+         count++;
+       }
+    }
+   count = count*rep;
+   for(let i = 0; i < remainder; i ++){
+       if(s[i] === "a"){
+           count++
+       }
+   }
+   return count
+}
