@@ -273,3 +273,9 @@ function repeatedString(s, n) {
    }
    return count
 }
+
+var reverseWords = function(s) {
+   let reversed = s.trim().split(/\s+/).reverse().join(' ')
+   return reversed
+
+};
