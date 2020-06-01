@@ -279,3 +279,8 @@ var reverseWords = function(s) {
    return reversed
 
 };
+
+var findPeakElement = function(nums) {
+    return nums.indexOf(Math.max(...nums))
+
+};
